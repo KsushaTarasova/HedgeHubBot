@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: HedgeHubBot
+
+weather:
+  api:
+    key: ${WEATHER_API_KEY}
+    url: http://api.openweathermap.org/data/2.5/weather
+
+bot:
+  name: HedgeHub
+  token: ${BOT_TOKEN}
