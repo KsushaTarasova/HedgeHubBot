@@ -16,13 +16,13 @@ public class StartCommand implements Command {
 
     @Override
     public SendMessage execute(Message message) {
-        log.info("Received /start command from chat");
+        log.info("Received /start command");
 
         Long chatId = message.getChatId();
-        String username = message.getChat().getUserName();
+        String firstName = message.getChat().getFirstName();
 
         return new SendMessage(chatId.toString(),
-                String.format("Hello, %s! I'm HedgeHubBot.", username));
+                String.format("Hello, %s! I'm HedgeHubBot.", firstName));
 
     }
 }
