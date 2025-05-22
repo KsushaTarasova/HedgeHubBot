@@ -22,7 +22,7 @@ public class StartCommand implements Command {
         String firstName = message.getChat().getFirstName();
 
         return new SendMessage(chatId.toString(),
-                String.format("Hello, %s! I'm HedgeHubBot.", firstName));
+                String.format("Привет, %s! Я HedgeHubBot. Рад видеть тебя в числе ежиков!", firstName));
 
     }
 }

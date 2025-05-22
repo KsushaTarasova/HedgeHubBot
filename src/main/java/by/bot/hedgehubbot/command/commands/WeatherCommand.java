@@ -4,9 +4,11 @@ import by.bot.hedgehubbot.command.core.Command;
 import by.bot.hedgehubbot.command.core.TelegramCommand;
 import by.bot.hedgehubbot.service.WeatherService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
+@Slf4j
 @RequiredArgsConstructor
 @TelegramCommand("/weather")
 public class WeatherCommand implements Command {
@@ -19,6 +21,8 @@ public class WeatherCommand implements Command {
 
     @Override
     public SendMessage execute(Message message) {
+        log.info("Received /weather command");
+
         String text = message.getText();
         String[] parts = text.split(" ", 2);
 
