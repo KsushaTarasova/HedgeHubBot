@@ -25,18 +25,13 @@ public class WeatherCommand implements Command {
         if (parts.length < 2) {
             return new SendMessage(
                     message.getChatId().toString(),
-                    "Укажите город: /weather Москва"
+                    "Укажите город: /weather Minsk"
             );
         }
 
         String city = parts[1].trim();
         String weatherInfo = weatherService.getWeather(city);
 
-        SendMessage response = new SendMessage();
-        response.setChatId(message.getChatId().toString());
-        response.setText(weatherInfo);
-        response.disableWebPagePreview();
-
-        return response;
+        return new SendMessage(message.getChatId().toString(), weatherInfo);
     }
 }

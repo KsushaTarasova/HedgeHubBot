@@ -1,4 +1,4 @@
-package by.bot.hedgehubbot;
+package by.bot.hedgehubbot.bot;
 
 import by.bot.hedgehubbot.command.core.CommandDispatcher;
 import by.bot.hedgehubbot.config.BotConfig;
